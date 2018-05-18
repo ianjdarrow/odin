@@ -1,0 +1,51 @@
+@import "_colors";
+body {
+  font-family: -apple-system, BlinkMacSystemFont, “Roboto”, “Droid Sans”,
+    “Helvetica Neue”, Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  line-height: 1.5;
+  color: $black;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 500;
+  letter-spacing: 0.03em;
+}
+
+@each $i in $colors {
+  h1.#{nth($i, 1)},
+  h2.#{nth($i, 1)},
+  h3.#{nth($i, 1)},
+  h4.#{nth($i, 1)},
+  h5.#{nth($i, 1)},
+  h6.#{nth($i, 1)},
+  p.#{nth($i, 1)},
+  span.#{nth($i, 1)},
+  i.#{nth($i, 1)},
+  label.#{nth($i, 1)} {
+    color: nth($i, 2) !important;
+  }
+}
+
+.subtitle {
+  font-size: 1rem;
+  color: $grey;
+}
+
+.text-center {
+  text-align: center;
+}
+
+a {
+  font-weight: 400;
+  color: inherit;
+  &:hover {
+    color: $primary;
+  }
+}

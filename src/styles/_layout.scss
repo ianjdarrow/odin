@@ -1,0 +1,38 @@
+@import "_colors";
+.container {
+  margin-top: 40px;
+  margin-bottom: 40px;
+  width: 100%;
+  max-width: 960px;
+  margin: 0 auto;
+  box-sizing: border-box;
+  padding: 1rem;
+}
+.center-all {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  min-height: 100vh;
+}
+
+@each $i in $colors {
+  .bg-#{nth($i, 1)} {
+    background: nth($i, 2) !important;
+  }
+}
+.flex {
+  display: flex;
+}
+.show {
+  opacity: 1 !important;
+}
+.hide {
+  opacity: 0 !important;
+}
+.nomargin {
+  margin: 0;
+}
+.nopadding {
+  padding: 0;
+}
